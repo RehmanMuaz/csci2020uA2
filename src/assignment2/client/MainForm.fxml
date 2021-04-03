@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="600.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment2.client.MainForm">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+            <children>
+                <HBox prefHeight="28.0" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="txtHostname" promptText="Hostname" text="localhost" />
+                        <TextField fx:id="txtPort" prefWidth="80" promptText="Port" text="6050" />
+                        <Button fx:id="btnConnect" mnemonicParsing="false" text="Connect" />
+                        <Button fx:id="btnBrowse" mnemonicParsing="false" text="Browse" />
+                        <Button fx:id="btnDownload" disable="true" mnemonicParsing="false" text="Download" />
+                        <Button fx:id="btnUpload" disable="true" mnemonicParsing="false" text="Upload" />
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                    </padding>
+                </HBox>
+                <SplitPane dividerPositions="0.65" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                    <items>
+                        <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" VBox.vgrow="ALWAYS">
+                            <items>
+                                <GridPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <ListView fx:id="lstLocal" layoutX="36.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                                    </children>
+                                    <columnConstraints>
+                                        <ColumnConstraints />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints />
+                                    </rowConstraints>
+                                </GridPane>
+                                <GridPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <ListView fx:id="lstRemote" layoutX="61.0" layoutY="56.0" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                                    <columnConstraints>
+                                        <ColumnConstraints />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints />
+                                    </rowConstraints>
+                                </GridPane>
+                            </items>
+                        </SplitPane>
+                        <TextArea fx:id="txtLog" editable="false" prefHeight="150.0" prefWidth="200.0" style="-fx-font-family: Consolas; -fx-control-inner-background:#FEFEFE;                                   -fx-highlight-text-fill: #FEFEFE; -fx-highlight-fill: #0000AA;                                   -fx-text-fill: #0000AA;" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                    </items>
+                </SplitPane>
+            </children>
+        </VBox>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
