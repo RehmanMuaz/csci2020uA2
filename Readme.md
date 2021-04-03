@@ -20,10 +20,13 @@ A simple TCP file transfer app.
 
 ## Installation
 git (https://git-scm.com/downloads)
+
 JDK15 (https://openjdk.java.net/projects/jdk/15/) 
+
 JavaFX 15 (https://gluonhq.com/products/javafx/)
+
 1. Use the following command to clone the repository.
 ```console
-$ git clone https://github.com/TheFakeNinja/csci2020u_MuazRehman.git
+$ git clone https://github.com/TheFakeNinja/csci2020uA2
 ```
 
